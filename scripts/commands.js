@@ -5,6 +5,8 @@ $('body').terminal({
     cat: function(width, height) {
         const img = $('<img src="https://placekitten.com/' +
                       width + '/' + height + '">');
+        img.on('load', this.resume);
+        this.pause();
         this.echo(img);
     },
     help: function() {
@@ -12,6 +14,7 @@ $('body').terminal({
         help - help menu 
         hello - Greet the terminal
         about - Info about this terminal
+        clear - clear this terminal
         cat [width] [height] - generates random cat pictures
         `)
     },

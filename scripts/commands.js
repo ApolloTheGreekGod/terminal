@@ -13,17 +13,17 @@ $('body').terminal({
         this.echo(` Commands : 
         help - help menu 
         hello - Greet the terminal
-        about - Info about this terminal
+        info - Info about this terminal
         clear - clear this terminal
         cat [width] [height] - generates random cat pictures
         `)
     },
     info: function() {
         this.echo(`
-        Terminal Info : 
-        Name : Apollo
-        Creator : Rayden Ooi
-        Made with JQuery, JavaScript, HTML, CSS`)
+        --- Terminal Info ---
+        Name      : Apollo
+        Creator   : Rayden Ooi
+        Made with : JQuery, JavaScript, HTML, CSS`)
     }
 },
  {
@@ -36,6 +36,9 @@ $('body').terminal({
     $$ |  $$ |      $$ |            $$ |  $$ |      $$ |            $$ |            $$ |  $$ |
     $$ |  $$ |      $$ |             $$$$$$  |      $$$$$$$$\       $$$$$$$$\          $$$$$$  |
     \__|  \__|      \__|             \______/       \________|      \________|       \______/ 
+
+
+
 
 
     Welcome to my Terminal-like Website! Type 'help' to see a list of commands.

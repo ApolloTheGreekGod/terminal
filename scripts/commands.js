@@ -2,21 +2,39 @@ $('body').terminal({
     hello: function() {
         this.echo('Hello, there. Wellcome to this terminal.');
     },
-    cat: function(width, height) {
-        const img = $('<img src="https://placekitten.com/' +
+    catpic: function(width, height) {
+        if (width || height == null) {
+            this.echo('Please insert width and height.')
+        }
+        if (width && height != null) {
+            const img = $('<img src="https://placekitten.com/' +
                       width + '/' + height + '">');
         img.on('load', this.resume);
         this.pause();
-        this.echo(img);
+        this.echo(img);}
     },
     help: function() {
         this.echo(` Commands : 
+        \n
+        Note: Commands displayed here are the only available commands, this terminal is not a real terminal therefore Linux/Unix commands will not work. \n
+        \n
+        --- Common Commands ---
+        \n
         help - help menu 
         hello - Greet the terminal
         info - Info about this terminal
         clear - clear this terminal
-        cat [width] [height] - generates random cat pictures
-        cd - Go to a directory
+        \n
+        --- Fun Commands ---
+        \n
+        catpic [width] [height] - generates random cat pictures
+        \n
+        --- Navigation ---
+        \n
+        ls - view directories
+        cd [directory]- Go to another webpage by inserting the directory name in the brackets
+        go - Go to another webpage by prompting you to enter a directory name
+        pwd - view path
         `)
     },
     info: function() {
@@ -26,7 +44,7 @@ $('body').terminal({
         Creator   : Rayden Ooi
         Made with : JQuery, JavaScript, HTML, CSS`)
     },
-    cd: function(){
+    go: function(){
         try{ 
        var dir = prompt(`Choose directory : About, Home`);
        var dirs = ['about', 'home']
@@ -45,6 +63,26 @@ $('body').terminal({
             catch(err) {
                 this.echo("No directory selected.")
             }
+       },
+       cd: function(dir){
+           try { 
+           if (dir.toLowerCase() === 'about'){
+               location.replace('about.html');
+           }
+           if (dir.toLowerCase() === 'home') {
+               location.replace('index.html');
+           }
+            var realsies = ['about', 'home']
+            if (dir != realsies) {
+                this.echo("That directory/parameter doesn't exist.")
+            }}
+            catch(err) { this.echo("Please insert a directory.")}
+       },
+       ls: function(){
+           this.echo("Home  About")
+       },
+       pwd: function() {
+           this.echo("user/home")
        }
 },
  {
@@ -56,9 +94,9 @@ $('body').terminal({
     $$$$$$$$ |      $$$$$$$  |      $$ |  $$ |      $$ |            $$ |            $$ |  $$ |
     $$  __$$ |      $$  ____/       $$ |  $$ |      $$ |            $$ |            $$ |  $$ |
     $$ |  $$ |      $$ |            $$ |  $$ |      $$ |            $$ |            $$ |  $$ |
-    $$ |  $$ |      $$ |             $$$$$$  |      $$$$$$$$\       $$$$$$$$\          $$$$$$  |
-    \__|  \__|      \__|             \______/       \________|      \________|       \______/ 
-    
+    $$ |  $$ |      $$ |             $$$$$$  |      $$$$$$$$ |       $$$$$$$$ |      $$$$$$  |
+     __|   __|       __|              ______/        ________|        ________|       ______/ 
+    \n
     Welcome to my Terminal-like Website! Type 'help' to see a list of commands.
     `
 

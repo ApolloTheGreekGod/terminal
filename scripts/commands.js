@@ -28,11 +28,20 @@ $('body').terminal({
     about: function() {
         location.replace('about.html')
     },
-    cd: function(about, home){
-        if (about === true) {
-            this.echo("success")
-        }
-    }
+    cd: function(){
+       var dir = prompt(`Choose directory : About, Home`);
+       if (dir === null) {
+           this.echo("Please enter a directory!")
+       }
+       switch(dir.toLowerCase()) {
+           case "about":
+               location.replace('about.html');
+               break;
+           case "home":
+               location.replace('index.html');
+               break;
+            }
+       }
 },
  {
      checkArity: false,

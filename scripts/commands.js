@@ -29,9 +29,11 @@ $('body').terminal({
         location.replace('about.html')
     },
     cd: function(){
+        try{ 
        var dir = prompt(`Choose directory : About, Home`);
-       if (dir === null) {
-           this.echo("Please enter a directory!")
+       var dirs = ['about', 'home']
+       if (dir.toLowerCase() != dirs) {
+           this.echo('That is not a directory.')
        }
        switch(dir.toLowerCase()) {
            case "about":
@@ -40,6 +42,10 @@ $('body').terminal({
            case "home":
                location.replace('index.html');
                break;
+            }
+        }
+            catch(err) {
+                this.echo("No directory selected.")
             }
        }
 },

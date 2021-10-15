@@ -42,7 +42,7 @@ $('body').terminal({
         --- Terminal Info ---
         Name      : Apollo
         Creator   : Rayden Ooi
-        Made with : JQuery, JavaScript, HTML, CSS`)
+        Made with : JavaScript, HTML, CSS`)
     },
     go: function(){
         try{ 

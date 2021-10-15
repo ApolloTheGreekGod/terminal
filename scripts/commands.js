@@ -24,9 +24,18 @@ $('body').terminal({
         Name      : Apollo
         Creator   : Rayden Ooi
         Made with : JQuery, JavaScript, HTML, CSS`)
+    },
+    about: function() {
+        location.replace('about.html')
+    },
+    cd: function(about, home){
+        if (about === true) {
+            this.echo("success")
+        }
     }
 },
  {
+     checkArity: false,
     greetings:
  `      $$$$$$\        $$$$$$$\          $$$$$$\         $$\              $$\               $$$$$$\  
      $$  __$$\       $$  __$$\        $$  __$$\        $$ |            $$ |            $$  __$$\ 

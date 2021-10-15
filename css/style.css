@@ -1,4 +1,16 @@
 .aboutBody {
     color: white;
     background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.button1 {
+    padding: 2%;
+    background-color: gray;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+
+

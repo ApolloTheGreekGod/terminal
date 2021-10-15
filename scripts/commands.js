@@ -26,9 +26,6 @@ $('body').terminal({
         Creator   : Rayden Ooi
         Made with : JQuery, JavaScript, HTML, CSS`)
     },
-    about: function() {
-        location.replace('about.html')
-    },
     cd: function(){
         try{ 
        var dir = prompt(`Choose directory : About, Home`);

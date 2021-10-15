@@ -58,11 +58,7 @@ $('body').terminal({
     $$ |  $$ |      $$ |            $$ |  $$ |      $$ |            $$ |            $$ |  $$ |
     $$ |  $$ |      $$ |             $$$$$$  |      $$$$$$$$\       $$$$$$$$\          $$$$$$  |
     \__|  \__|      \__|             \______/       \________|      \________|       \______/ 
-
-
-
-
-
+    
     Welcome to my Terminal-like Website! Type 'help' to see a list of commands.
     `
 

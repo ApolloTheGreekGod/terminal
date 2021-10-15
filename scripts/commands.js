@@ -16,6 +16,7 @@ $('body').terminal({
         info - Info about this terminal
         clear - clear this terminal
         cat [width] [height] - generates random cat pictures
+        cd - Go to a directory
         `)
     },
     info: function() {

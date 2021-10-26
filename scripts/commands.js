@@ -40,10 +40,12 @@ $('body').terminal({
     },
     info: function() {
         this.echo(`
-        --- Terminal Info ---
+        ---- Terminal Info ----
+        \n
         Name      : Apollo
         Creator   : Rayden Ooi
-        Made with : JavaScript, HTML, CSS`)
+        Made with : JavaScript, HTML, CSS
+        \n`)
     },
     go: function(){
         try{ 

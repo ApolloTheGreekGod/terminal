@@ -3,10 +3,10 @@ $('body').terminal({
         this.echo('Hello, there. Wellcome to this terminal.');
     },
     catpic: function(width, height) {
-        if (width || height === null) {
+        if (width == null || height == null) {
             this.echo('Please insert width and height.')
         }
-        if (width && height != null) {
+        if (width != null && height != null) {
             const img = $('<img src="https://placekitten.com/' +
                       width + '/' + height + '">');
         img.on('load', this.resume);
@@ -24,6 +24,7 @@ $('body').terminal({
         hello - Greet the terminal
         info - Info about this terminal
         clear - clear this terminal
+        apollo - reload this terminal
         \n
         --- Fun Commands ---
         \n
@@ -83,8 +84,11 @@ $('body').terminal({
        },
        pwd: function() {
            this.echo("user/home")
+       },
+       apollo: function() {
+           location.reload();
        }
-},
+}, 
  {
      checkArity: false,
     greetings:

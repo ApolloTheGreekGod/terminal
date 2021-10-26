@@ -3,7 +3,7 @@ $('body').terminal({
         this.echo('Hello, there. Wellcome to this terminal.');
     },
     catpic: function(width, height) {
-        if (width || height == null) {
+        if (width || height === null) {
             this.echo('Please insert width and height.')
         }
         if (width && height != null) {

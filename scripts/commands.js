@@ -102,11 +102,11 @@ $('body').terminal({
            this.typing('echo', 5, 'Apollo')
        },
        joke: function() {
-           /*const axios = require('axios');
+        const axios = require(['axios']);
            axios.get('https://api.icndb.com/jokes/random')
            .then(data =>
             this.typing('echo', 5, `${data.value.joke}`)
-            )*/
+            )
  
        }
 }, 

@@ -51,7 +51,7 @@ $('body').terminal({
     go: function(){
         try{ 
        var dir = prompt(`Choose directory : About, Home`);
-       var dirs = ['about', 'home']
+       var dirs = ['about', 'home', 'itoilet']
        if (dir.toLowerCase() != dirs) {
            this.echo('That is not a directory.')
        }
@@ -62,6 +62,8 @@ $('body').terminal({
            case "home":
                location.replace('index.html');
                break;
+            case "itoilet":
+               location.replace('https://apollothegreekgod.github.io/raydeno/');
             }
         }
             catch(err) {

@@ -76,9 +76,11 @@ $('body').terminal({
                location.replace('index.html');
            }
             var realsies = ['about', 'home']
-            if (dir != realsies) {
+            if (dir.toLowerCase() != realsies) {
                 this.echo("That directory/parameter doesn't exist.")
-            }}
+            }
+        
+        }
             catch(err) { this.echo("Please insert a directory.")}
        },
        ls: function(){

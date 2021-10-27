@@ -105,7 +105,7 @@ $('body').terminal({
         const axios = require(['axios']);
            axios.get('https://api.icndb.com/jokes/random')
            .then(data =>
-            this.typing('echo', 5, `${jokes[1]}`)
+            this.typing('echo', 5, `${data.value.joke}`)
             )
  
        }

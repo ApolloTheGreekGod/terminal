@@ -1,6 +1,7 @@
 $('body').terminal({
     hello: function() {
-        this.typing('echo', 150, 'Hello, there. Welcome to this terminal.');
+        this.typing('echo', 150, 'Hello, there. Welcome to this terminal and I hope you enjoy.');
+        this.typing('prompt', 100, `HELP IM STUCK INSIDE THIS TERMINAL!!`);
     },
     catpic: function(width, height) {
         if (width == null || height == null) {
@@ -39,7 +40,7 @@ $('body').terminal({
         `)
     },
     info: function() {
-        this.echo(`
+        this.typing('echo', 5, `
         ---- Terminal Info ----
         \n
         Name      : Apollo

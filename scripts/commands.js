@@ -70,8 +70,7 @@ $('body').terminal({
        cd: function(dir){
         
            try { 
-            var realsies = ['about', 'home']
-            if (!dir.toLowerCase().includes(realsies[1]) && !dir.toLowerCase().includes(realsies[2])) {
+            if (!dir.toLowerCase().includes('home') && !dir.toLowerCase().includes('about')) {
                 this.echo("That directory/parameter doesn't exist.")
             }
              if (dir.toLowerCase() === 'about'){

@@ -102,9 +102,9 @@ $('body').terminal({
            this.typing('echo', 5, 'Apollo')
        },
        joke: function() {
-            fetch('https://api.icndb.com/jokes/random')
+            fetch('https://v2.jokeapi.dev/joke/Any')
             .then(response => response.json())
-            .then(data => {this.typing('echo', 5, `${data.value.joke}`)})
+            .then(data => {this.typing('echo', 5, `${data.setup} \n ${data.delivery}`)})
             .catch(error => {})
  
        }

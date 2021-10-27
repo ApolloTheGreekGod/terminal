@@ -103,9 +103,9 @@ $('body').terminal({
        },
        joke: function() {
         const axios = require(['axios']);
-           axios.get('https://api.icndb.com/jokes/random')
+           axios.get('https://raw.githubusercontent.com/beCoditive/random-jokes-api/main/src/Assets/joke_list.js')
            .then(data =>
-            this.typing('echo', 5, `${data.value.joke}`)
+            this.typing('echo', 5, `${jokes[1]}`)
             )
  
        }

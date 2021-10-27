@@ -16,8 +16,3 @@
 .button1:hover {
     background-color: rgb(68, 68, 68);
 }
-.terminal {
-    --color: rgba(0, 200, 0, 0.99);
-    --animation: terminal-glow;
-    --glow: 1;
-}

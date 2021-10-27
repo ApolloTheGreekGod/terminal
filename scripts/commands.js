@@ -1,6 +1,6 @@
 $('body').terminal({
     hello: function() {
-        this.echo('Hello, there. Wellcome to this terminal.');
+        this.typing('echo', 150, 'Hello, there. Welcome to this terminal.');
     },
     catpic: function(width, height) {
         if (width == null || height == null) {
@@ -14,9 +14,9 @@ $('body').terminal({
         this.echo(img);}
     },
     help: function() {
-        this.echo(` Commands : 
+        this.typing('echo', 5, ` Commands : 
         \n
-        Note: Commands displayed here are the only available commands, this terminal is not a real terminal therefore Linux/Unix commands will not work. \n
+        Note: Commands displayed here are the only available commands, this terminal is not a real terminal. Real-world commands will not work. \n
         \n
         --- Common Commands ---
         \n

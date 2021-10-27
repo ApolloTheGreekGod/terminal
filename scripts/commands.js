@@ -21,22 +21,23 @@ $('body').terminal({
         \n
         --- Common Commands ---
         \n
-        help - help menu 
+        help - Help menu 
         hello - Greet the terminal
         info - Info about this terminal
-        clear - clear this terminal
-        apollo - reload this terminal
+        clear - Clear this terminal
+        apollo - Reload this terminal
+        whoami - Check terminal name
         \n
         --- Fun Commands ---
         \n
-        catpic [width] [height] - generates random cat pictures
+        catpic [width] [height] - Generates random cat pictures
         \n
         --- Navigation ---
         \n
         ls - view directories
         cd [directory]- Go to another webpage by inserting the directory name in the brackets
         go - Go to another webpage by prompting you to enter a directory name
-        pwd - view path
+        pwd - View path
         `)
     },
     info: function() {
@@ -96,6 +97,9 @@ $('body').terminal({
        },
        apollo: function() {
            location.reload();
+       },
+       whoami: function() {
+           this.typing('echo', 5, 'Apollo')
        }
 }, 
  {

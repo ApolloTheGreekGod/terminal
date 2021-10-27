@@ -68,18 +68,18 @@ $('body').terminal({
             }
        },
        cd: function(dir){
+        
            try { 
-           if (dir.toLowerCase() === 'about'){
-               location.replace('about.html');
-           }
-           if (dir.toLowerCase() === 'home') {
-               location.replace('index.html');
-           }
             var realsies = ['about', 'home']
-            if (dir.toLowerCase() != realsies) {
+            if (!dir.toLowerCase().includes(realsies[1]) && !dir.toLowerCase().includes(realsies[2])) {
                 this.echo("That directory/parameter doesn't exist.")
             }
-        
+             if (dir.toLowerCase() === 'about'){
+               location.replace('about.html');
+           }
+            if (dir.toLowerCase() === 'home') {
+               location.replace('index.html');
+           }
         }
             catch(err) { this.echo("Please insert a directory.")}
        },

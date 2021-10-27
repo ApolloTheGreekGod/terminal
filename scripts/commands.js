@@ -100,6 +100,13 @@ $('body').terminal({
        },
        whoami: function() {
            this.typing('echo', 5, 'Apollo')
+       },
+       joke: function() {
+           const axios = require('axios').default;
+           axios.get('https://api.icndb.com/jokes/random')
+           .then(data =>
+            this.typing('echo', 5, `${data.value.joke}`)
+            )
        }
 }, 
  {

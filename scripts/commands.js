@@ -1,7 +1,7 @@
 $('body').terminal({
     hello: function() {
-        this.typing('echo', 150, 'Hello, there. Welcome to this terminal and I hope you enjoy.');
-        this.typing('prompt', 100, `HELP IM STUCK INSIDE THIS TERMINAL!!`);
+        this.typing('echo', 90, `Hello, there. Welcome to this terminal and type 'help' to view a list of commands.`);
+        this.typing('prompt', 70, `HELP IM STUCK INSIDE THIS TERMINAL!!`);
     },
     catpic: function(width, height) {
         if (width == null || height == null) {
@@ -71,7 +71,7 @@ $('body').terminal({
        cd: function(dir){
         
            try { 
-            if (!dir.toLowerCase().includes('home') && !dir.toLowerCase().includes('about')) {
+            if (!dir.toLowerCase().includes('home') && !dir.toLowerCase().includes('about') && !dir.toLowerCase().includes('itoilet')) {
                 this.echo("That directory/parameter doesn't exist.")
             }
              if (dir.toLowerCase() === 'about'){
@@ -79,6 +79,9 @@ $('body').terminal({
            }
             if (dir.toLowerCase() === 'home') {
                location.replace('index.html');
+           }
+           if (dir.toLowerCase() === 'itoilet') {
+               location.replace('https://apollothegreekgod.github.io/raydeno/');
            }
         }
             catch(err) { this.echo("Please insert a directory.")}
@@ -105,7 +108,7 @@ $('body').terminal({
     $$ |  $$ |      $$ |             $$$$$$  |      $$$$$$$$ |       $$$$$$$$ |      $$$$$$  |
      __|   __|       __|              ______/        ________|        ________|       ______/ 
     \n
-    Welcome to my Terminal-like Website! Type 'help' to see a list of commands.
+    Welcome to my Terminal-like Website! Type 'hello' to get started.
     `
 
 });

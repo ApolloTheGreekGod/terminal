@@ -1,4 +1,5 @@
 $('body').terminal({
+
     hello: function() {
         this.typing('echo', 90, `Hello, there. Welcome to this terminal and type 'help' to view a list of commands.`);
         this.typing('prompt', 70, `HELP IM STUCK INSIDE THIS TERMINAL!!`);
@@ -31,6 +32,7 @@ $('body').terminal({
         --- Fun Commands ---
         \n
         catpic [width] [height] - Generates random cat pictures
+        joke - Generates limited random jokes
         \n
         --- Navigation ---
         \n
@@ -102,11 +104,15 @@ $('body').terminal({
            this.typing('echo', 5, 'Apollo')
        },
        joke: function() {
+        /*this.pause();
             fetch('https://v2.jokeapi.dev/joke/Any')
             .then(response => response.json())
-            .then(data => {this.typing('echo', 5, `${data.setup} \n ${data.delivery}`)})
-            .catch(error => {})
- 
+            .then(data => { 
+                this.typing('echo', 5, `${data.setup} \n ${data.delivery}`);
+            })
+            .catch(error => { this.echo(error)})
+        this.resume();*/
+        this.typing('echo', 5, `${jokes[Math.floor(Math.random() * jokes.length)]}`)
        }
 }, 
  {

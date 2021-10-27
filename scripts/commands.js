@@ -109,3 +109,4 @@ $('body').terminal({
     `
 
 });
+//https://terminal.jcubic.pl/ <- docs and examples from original JQuery Terminal Library

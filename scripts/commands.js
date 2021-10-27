@@ -87,7 +87,7 @@ $('body').terminal({
             catch(err) { this.echo("Please insert a directory.")}
        },
        ls: function(){
-           this.echo("Home  About")
+           this.echo("Home  About  iToilet")
        },
        pwd: function() {
            this.echo("user/home")

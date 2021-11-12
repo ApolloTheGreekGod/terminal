@@ -76,7 +76,7 @@ $('body').terminal({
        cd: function(dir){
         
            try { 
-            if (!dir.toLowerCase().includes('home') && !dir.toLowerCase().includes('about') && !dir.toLowerCase().includes('itoilet')) {
+            if (!dir.toLowerCase().includes('home') && !dir.toLowerCase().includes('about') && !dir.toLowerCase().includes('itoilet') && !dir.toLowerCase().includes('oli')) {
                 this.echo("That directory/parameter doesn't exist.")
             }
              if (dir.toLowerCase() === 'about'){
@@ -87,6 +87,9 @@ $('body').terminal({
            }
            if (dir.toLowerCase() === 'itoilet') {
                location.replace('https://apollothegreekgod.github.io/raydeno/');
+           }
+           if (dir.toLowerCase() === 'oli') {
+               location.replace('https://apollothegreekgod.github.io/oliviarodrigo/')
            }
         }
             catch(err) { this.echo("Please insert a directory.")}

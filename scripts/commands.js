@@ -67,6 +67,8 @@ $('body').terminal({
                break;
             case "itoilet":
                location.replace('https://apollothegreekgod.github.io/raydeno/');
+            case "oli":
+                location.replace('htpps://apollothegreekgod.github.io/oliviarodrigo/');
             }
         }
             catch(err) {
@@ -95,7 +97,7 @@ $('body').terminal({
             catch(err) { this.echo("Please insert a directory.")}
        },
        ls: function(){
-           this.echo("Home  About  iToilet")
+           this.echo("Home  About  iToilet  Oli")
        },
        pwd: function() {
            this.echo("user/home")

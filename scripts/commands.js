@@ -53,8 +53,8 @@ $('body').terminal({
     },
     go: function(){
         try{ 
-       var dir = prompt(`Choose directory : About, Home`);
-       var dirs = ['about', 'home', 'itoilet']
+       var dir = prompt(`Choose directory : About, Home, iToilet, Oli`);
+       var dirs = ['about', 'home', 'itoilet', 'oli']
        if (dir.toLowerCase() != dirs) {
            this.echo('That is not a directory.')
        }

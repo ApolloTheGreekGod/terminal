@@ -67,8 +67,10 @@ $('body').terminal({
                break;
             case "itoilet":
                location.replace('https://apollothegreekgod.github.io/raydeno/');
+               break;
             case "oli":
-                location.replace('htpps://apollothegreekgod.github.io/oliviarodrigo/');
+                location.replace('https://apollothegreekgod.github.io/oliviarodrigo/');
+                break;
             }
         }
             catch(err) {
